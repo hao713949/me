@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --bar-gray: #bdc3c7;
+            --bar-blue: #3498db;
+            --bar-green: #2ecc71;
+            --bar-purple: #9b59b6;
+            --bar-highlight: #e67e22;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        .chart-area {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 250px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 18%;
+        }
+
+        .bar {
+            width: 100%;
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .bar-label {
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            white-space: nowrap;
+        }
+
+        .bar-name {
+            position: absolute;
+            bottom: -35px;
+            font-size: 0.7rem;
+            color: #555;
+            text-align: center;
+            width: 60px;
+        }
+
+        /* 潤德莊園特殊堆疊樣式 */
+        .stacked-bar {
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            height: 90px; /* 代表 9萬 */
+        }
+
+        .base-part { height: 83.3%; background: var(--bar-highlight); border-radius: 0; } /* 7.5萬 */
+        .rebate-part { height: 16.7%; background: var(--bar-gray); border-radius: 4px 4px 0 0; } /* 1.5萬 */
+
+        .rebate-tag {
+            position: absolute;
+            right: -45px;
+            top: 5px;
+            font-size: 10px;
+            color: #e67e22;
+            background: #fff3e0;
+            padding: 2px 4px;
+            border: 1px solid #e67e22;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chart-container">
+    <h3>區域地價行情對比 (萬/坪)</h3>
+    
+    <div class="chart-area">
+        <!-- 風景區 -->
+        <div class="bar-group">
+            <div class="bar-label">9-12</div>
+            <div class="bar" style="height: 120px; background: var(--bar-blue);"></div>
+            <div class="bar-name">風景區<br>(限)</div>
+        </div>
+
+        <!-- 零星建地 -->
+        <div class="bar-group">
+            <div class="bar-label">14-16</div>
+            <div class="bar" style="height: 160px; background: var(--bar-green);"></div>
+            <div class="bar-name">零星<br>建地</div>
+        </div>
+
+        <!-- 社區型 -->
+        <div class="bar-group">
+            <div class="bar-label">18-22</div>
+            <div class="bar" style="height: 220px; background: var(--bar-purple);"></div>
+            <div class="bar-name">社區型<br>建地</div>
+        </div>
+
+        <!-- 潤德莊園 -->
+        <div class="bar-group">
+            <div class="bar-label" style="color:var(--bar-highlight)">7.5 - 9</div>
+            <div class="stacked-bar">
+                <div class="base-part"></div>
+                <div class="rebate-part"></div>
+                <div class="rebate-tag">返利1.5萬</div>
+            </div>
+            <div class="bar-name" style="font-weight:bold; color:#333;">潤德<br>莊園</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
