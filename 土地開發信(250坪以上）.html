@@ -5,7 +5,7 @@
     <title>土地資產去化策略建議書-蔡侑霖</title>
     <style>
         @page { size: A4; margin: 0; }
-        body { margin: 0; padding: 0; font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; color: #333; line-height: 1.5; }
+        body { margin: 0; padding: 0; font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; color: #333; line-height: 1.6; }
         .page { width: 210mm; height: 297mm; padding: 15mm 20mm; box-sizing: border-box; position: relative; page-break-after: always; background-color: #ffffff; overflow: hidden; }
         .page::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: linear-gradient(90deg, #c5a059, #e2c08d); }
         
@@ -13,26 +13,33 @@
         .cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; }
         .cover h1 { font-size: 28pt; color: #1a1a1a; margin-bottom: 5mm; border-bottom: 3px solid #c5a059; padding-bottom: 4mm; }
         .cover h2 { font-size: 16pt; color: #c5a059; font-weight: normal; margin-bottom: 15mm; letter-spacing: 2px; }
-        .name { font-size: 28pt; font-weight: bold; color: #1a1a1a; letter-spacing: 4px; margin-bottom: 12mm; }
+        .name { font-size: 28pt; font-weight: bold; color: #1a1a1a; letter-spacing: 4px; margin-bottom: 2mm; }
+        .title-label { font-size: 18pt; color: #c5a059; font-weight: bold; margin-bottom: 10mm; letter-spacing: 2px; }
         
-        /* 內容區塊樣式 */
+        /* 內容區塊樣式 (字體調整為 1.5 倍) */
         .card-container { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-bottom: 8mm; width: 100%; }
         .card { background: #fdfaf4; padding: 5mm; border-radius: 4px; border-top: 3px solid #c5a059; text-align: left; }
-        .card h4 { margin: 0 0 2mm 0; font-size: 13pt; color: #1a1a1a; }
-        .card p { margin: 0; font-size: 10.5pt; color: #444; line-height: 1.6; }
+        .card h4 { margin: 0 0 2mm 0; font-size: 15pt; color: #1a1a1a; }
+        .card p { margin: 0; font-size: 12.5pt; color: #444; line-height: 1.7; }
         .full-card { grid-column: span 2; }
 
         /* 策略內容頁樣式 */
-        h3 { font-size: 18pt; color: #1a1a1a; border-left: 6px solid #c5a059; padding-left: 6mm; margin: 5mm 0 6mm 0; }
-        .section-desc { font-size: 12pt; margin-bottom: 6mm; color: #444; font-weight: bold; }
+        h3 { font-size: 20pt; color: #1a1a1a; border-left: 6px solid #c5a059; padding-left: 6mm; margin: 5mm 0 6mm 0; }
+        .section-desc { font-size: 14pt; margin-bottom: 6mm; color: #444; font-weight: bold; line-height: 1.7; }
         .action-box { background: #f9f9f9; padding: 6mm; margin-bottom: 8mm; border-radius: 4px; }
-        .action-item { margin-bottom: 3mm; font-size: 11pt; }
+        .action-item { margin-bottom: 3.5mm; font-size: 13.5pt; line-height: 1.7; }
         .action-item strong { color: #c5a059; }
 
         .contact-container { border: 2px solid #c5a059; padding: 8mm; text-align: center; margin-top: 2mm; }
-        .contact-detail { font-size: 14pt; margin-bottom: 2mm; font-weight: bold; }
+        .contact-detail { font-size: 16pt; margin-bottom: 2mm; font-weight: bold; }
         
-        .footer { position: absolute; bottom: 10mm; width: 100%; text-align: center; font-size: 9pt; color: #999; left: 0; }
+        .footer { position: absolute; bottom: 10mm; width: 100%; text-align: center; font-size: 11pt; color: #999; left: 0; }
+
+        /* 手機端響應式調整 */
+        @media screen and (max-width: 600px) {
+            .card-container { grid-template-columns: 1fr; }
+            .full-card { grid-column: span 1; }
+        }
     </style>
 </head>
 <body>
@@ -44,6 +51,7 @@
             <h2>豪宅 ‧ 別墅 ‧ 土地開發規劃</h2>
             
             <div class="name">蔡侑霖</div>
+            <div class="title-label">年度千萬經紀人</div>
 
             <div class="card-container">
                 <div class="card">
@@ -56,7 +64,7 @@
                 </div>
             </div>
 
-            <div style="font-size: 12pt; color: #666; margin-top: 5mm;">
+            <div style="font-size: 14pt; color: #666; margin-top: 5mm;">
                 25+ 年市場銷售經驗 ‧ 永慶不動產<br>
                 📞 0912-713949
             </div>
@@ -91,8 +99,8 @@
         </div>
 
         <div class="contact-container">
-            <div style="font-size: 14pt; margin-bottom: 2mm; color: #666;">永慶不動產 大連捷運加盟店 ‧ 南興捷運加盟店</div>
-            <div style="font-size: 16pt; margin-bottom: 3mm; color: #1a1a1a; font-weight: bold;">蔡侑霖</div>
+            <div style="font-size: 15pt; margin-bottom: 2mm; color: #666;">永慶不動產 大連捷運加盟店 ‧ 南興捷運加盟店</div>
+            <div style="font-size: 18pt; margin-bottom: 3mm; color: #1a1a1a; font-weight: bold;">蔡侑霖</div>
             <div class="contact-detail">📞 0912-713949</div>
             <div class="contact-detail">📱 LINE ID：0912713949</div>
         </div>
